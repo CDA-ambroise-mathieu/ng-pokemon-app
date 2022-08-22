@@ -15,16 +15,15 @@ export class AppComponent implements OnInit {
   }
 
   selectPokemon(pokemonId: string) {
-    const pokemon: Pokemon |undefined = this.pokemonList.find(
-      pokemon => pokemon.id == +pokemonId
-      );
-      if (pokemon) {
-        this.pokemonSelected = pokemon;
-        console.log(`${pokemon.name} !, Gooooooooooo!`);
-      }else{
-        this.pokemonSelected = pokemon;
-        console.log('Ce pokémon n\'existe pas !');
-        
-      }
+    const pokemon: Pokemon | undefined = this.pokemonList.find(
+      (pokemon) => pokemon.id == +pokemonId
+    );
+    if (pokemon) {
+      this.pokemonSelected = pokemon;
+      console.log(`${pokemon.name} !, Gooooooooooo!`);
+    } else {
+      this.pokemonSelected = pokemon;
+      console.log("Ce pokémon n'existe pas !");
+    }
   }
 }
